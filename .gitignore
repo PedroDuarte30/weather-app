@@ -1,0 +1,8 @@
+# Chaves de API e Segredos
+.env
+config.js
+
+# Sistema e IDE
+.DS_Store
+.vscode/
+node_modules/
