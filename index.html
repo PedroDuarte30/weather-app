@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/css/styles.css" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <header>
+      <h1>Weather App</h1>
+    </header>
+    <main class="weather-container">
+      <form id="search-form">
+        <input
+          type="search"
+          id="city-input"
+          placeholder="Leiria, Portugal"
+          aria-label="Pesquisar Cidade"
+        />
+        <button type="submit">Pesquisar</button>
+      </form>
+      <section class="current-weather">
+        <article id="weather-display" class="card" aria-live="polite">
+          <h2 id="city-name">--</h2>
+          <p id="temperature">--ºc</p>
+          <img id="weather-icon" src="" alt="condição climatica" />
+        </article>
+      </section>
+
+      <footer>
+        <p>
+          Dados fornecidos por
+          p>Dados fornecidos por <a href="https://openweathermap.org/" target="_blank" rel="noopener">OpenWeather</a></p>
+        </p>
+      </footer>
+    </main>
+  </body>
+</html>
