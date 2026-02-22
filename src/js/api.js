@@ -1,3 +1,5 @@
+const API_KEY = "560cb9cf84c2c0ec880792a5ec08b42a";
+
 /**
  * Function to retrieve meteorological data
  * @param {string} city - Name of city entered by user
