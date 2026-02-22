@@ -1,9 +1,19 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
     <title>Weather App</title>
   </head>
   <body>
@@ -21,7 +31,7 @@
         <button type="submit">Pesquisar</button>
       </form>
       <section class="current-weather">
-        <article id="weather-display" class="card" aria-live="polite">
+        <article id="weather-display" class="card hidden" aria-live="polite">
           <h2 id="city-name">--</h2>
           <p id="temperature">--ºc</p>
           <img id="weather-icon" src="" alt="condição climatica" />
@@ -31,9 +41,14 @@
       <footer>
         <p>
           Dados fornecidos por
-          p>Dados fornecidos por <a href="https://openweathermap.org/" target="_blank" rel="noopener">OpenWeather</a></p>
+          <a href="https://openweathermap.org/" target="_blank" rel="noopener"
+            >OpenWeather</a
+          >
         </p>
       </footer>
     </main>
+    <script src="src/js/main.js"></script>
+    <script src="src/js/config.js"></script>
+    <script src="src/js/api.js"></script>
   </body>
 </html>

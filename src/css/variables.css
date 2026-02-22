@@ -1,0 +1,28 @@
+:root {
+    /*Main colors*/
+    --primary-color: #3498db;
+    --primary-dark: #2980b9;
+    --accent-color: #f1c40f;
+
+    /*Ash / Neutral Scale*/
+    --bg-color: #f0f2f5;
+    --card-bg: #ffffff;
+    --text-main: #2c3e50;
+    --text-muted: #7f8c8d;
+    --error-color: #e74c3c;
+
+    /*Typography*/
+    --font-main: 'Poppins', system-ui, -apple-system, sans-serif;
+    --font-size-base: 1.25rem;
+    --font-bold: 700;
+
+    /*Spacing and Borders*/
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --radius: 0.75rem;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    /*Transition*/
+    --transition: all 0.3s ease;
+}
