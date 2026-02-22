@@ -25,7 +25,27 @@ For this project, I prioritized web development best practices and modern standa
 
 ---
 
+2. **Configure your API Key:**
+   This project requires an API Key from [OpenWeatherMap](https://openweathermap.org/).
+   * Create a file named `config.js` in the js folder.
+   * Add the following code:
+     ```javascript
+     const API_KEY = "YOUR_API_KEY_HERE";
+     ```
+
+3. **Open the project:**
+   Simply open `index.html` in your browser or use the **Live Server** extension in VS Code.
+
+---
+
+## 📸 Preview
+<img width="1909" height="891" alt="Captura de ecrã 2026-02-22 155530" src="https://github.com/user-attachments/assets/a80f8da5-f461-4215-9f0b-e8cb6e0e7ec3" />
+
+
+## 📄 License
+This project is under the MIT License.
+
 ## 🛠️ How to Run
 
 1. **Clone the repository:**
-   ```bash
+   https://github.com/PedroDuarte30/weather-app.git 
