@@ -1,8 +1,9 @@
-# Chaves de API e Segredos
+#API key 
 .env
 config.js
 
-# Sistema e IDE
+# System and IDE
 .DS_Store
 .vscode/
 node_modules/
+
