@@ -39,7 +39,9 @@ For this project, I prioritized web development best practices and modern standa
 ---
 
 ## 📸 Preview
-<img width="1909" height="891" alt="Captura de ecrã 2026-02-22 155530" src="https://github.com/user-attachments/assets/a80f8da5-f461-4215-9f0b-e8cb6e0e7ec3" />
+<img width="1820" height="831" alt="Captura de ecrã 2026-02-24 095512" src="https://github.com/user-attachments/assets/e7ebe36d-42bf-40b7-a1e9-c3bab01ab284" />
+
+
 
 
 ## 📄 License
