@@ -2,6 +2,20 @@
 const searchForm = document.getElementById("search-form");
 const cityInput = document.getElementById("city-input");
 
+//Function to convert time (Unix) to HH:MM format
+function formatTime(unixTimestamp, timezone) {
+    //The API gives the time in seconds, JS needs milliseconds (x1000)
+    //We add the time zone to adjust to the local time of the city searched
+    const date = new Date((unixTimestamp + timezone) * 1000);
+
+    // We use getUTC to prevent our PC from trying to apply the time 
+    // zone of Portugal to a city that may be in Japan or Brazil.
+    const hours = date.getUTCHours().toString().padStart(2, '0');
+    const minutes = date.getUTCMinutes().toString().padStart(2, '0');
+
+    return `${hours}:${minutes}`;
+}
+
 //Form submission event
 searchForm.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -35,6 +49,30 @@ function displayWeather(data) {
 
     const temp = data.main.temp;
     updateBackground(temp);
+
+    //Capture data from the API's ‘data’ object 
+    const humidity = data.main.humidity;
+    const windSpeed = data.wind.speed;
+    const sunriseWeather = data.sys.sunrise;
+    const sunsetWeather = data.sys.sunset;
+    const timeZone = data.timezone;
+
+    //Select the HTML elements
+    const humidityElement = document.getElementById("humidity");
+    const windElement = document.getElementById("wind");
+    const sunriseElement = document.getElementById("sunrise");
+    const sunsetElement = document.getElementById("sunset");
+
+    //Write simple data on the screen
+    humidityElement.textContent = humidity;
+
+    //Converting m/s to km/h and rounding
+    windElement.textContent = Math.round(windSpeed * 3.6);
+
+    //Write the sun data
+    sunriseElement.textContent = formatTime(sunriseWeather, timeZone);
+    sunsetElement.textContent = formatTime(sunsetWeather, timeZone);
+
 }
 
 function showError(message) {
@@ -52,7 +90,7 @@ function showError(message) {
 
     //Securely clears old values
     temperature.textContent = "";
-    
+
     //Hide the icon so that the empty or “broken” square does not appear.
     if (weatherIcon) {
         weatherIcon.src = "";
@@ -61,7 +99,7 @@ function showError(message) {
 }
 function updateBackground(temp) {
     const body = document.body;
-    
+
     if (temp <= 15) {
         //Freezing cold (Bright blue)
         body.style.background = "linear-gradient(135deg, #74ebd5 0%, #9face6 100%)";

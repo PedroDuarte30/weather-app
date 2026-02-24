@@ -14,7 +14,16 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/images/android-icon-192x192.png"/>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="assets/images/android-icon-192x192.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
     <title>Weather App</title>
   </head>
   <body>
@@ -39,6 +48,36 @@
         </article>
       </section>
 
+      <section id="details-section" class="details-container">
+        <div class="detail-box">
+         <i class="ri-water-percent-line"></i>
+          <div class="detail-text">
+            <span class="detail-label">Humidade</span>
+            <span class="detail-value"><span id="humidity">--</span>%</span>
+          </div>
+        </div>
+        <div class="detail-box">
+          <i class="ri-windy-line"></i>
+          <div class="detail-text">
+            <span class="detail-label">Vento</span>
+            <span class="detail-value"><span id="wind">--</span> km/h</span>
+          </div>
+        </div>
+        <div class="detail-box">
+          <i class="ri-sun-line"></i>
+          <div class="detail-text">
+            <span class="detail-label">Nascer do Sol</span>
+            <span class="detail-value" id="sunrise">--:--</span>
+          </div>
+        </div>
+        <div class="detail-box">
+          <i class="ri-moon-line"></i>
+          <div class="detail-text">
+            <span class="detail-label">Pôr do Sol</span>
+            <span class="detail-value" id="sunset">--:--</span>
+          </div>
+        </div>
+      </section>
       <footer>
         <p>
           Dados fornecidos por

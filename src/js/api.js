@@ -25,8 +25,10 @@ async function getWeatherData(city) {
 
         //Call the function that will handle the display (it will be created in main.js)
         displayWeather(data);
+
     } catch (error) {
         console.log("API Error:", error.message);
         showError(error.message);
     }
 }
+
